@@ -1,0 +1,159 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+}
+
+#navbar{
+  background-color: #65869E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  }
+#nav-list{
+  display: flex;
+  flex-direction: row;
+  }
+
+li{
+  list-style:none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 1rem 2rem
+}
+
+a:hover{
+  background-color: #8679BE;
+  
+}
+
+#welcome-section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #105E80, #181719);
+}
+
+h1{
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#welcome-section > p{
+  color: #be3144;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.projects{
+  margin: 0;
+  padding:8rem 2rem;
+  text-align: center;
+  background-color:#8A8DF3;
+}
+
+h2{
+  margin: 0;
+  font-size: 3.2rem;
+  color: white;
+}
+
+@media (max-width: 800px){
+  h2{
+    font-size: 2.5rem;
+  }
+}
+
+.project-image{
+  height: calc(100% - 4.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile{
+  color: white;
+  width: 100%;
+  background-color: #303841;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+#contact{
+  background-color: #000;
+  background-image: linear-gradient(62deg, #105E80, #181719);
+  width: 100%;
+  height: 80vh;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-p{
+  color: white;
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+
+#profile-link {
+  background-image: linear-gradient(
+    to right,
+    #e6b8f8,
+    #e6b8f8 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#profile-link:before{
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+#profile-link:hover {
+ background-position: 0;
+}
+
+#profile-link:hover::before{
+  width: 100%;
+}
